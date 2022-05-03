@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  test:
+    image: node:16
+    working_dir: /app
+    volumes:
+      - .:/app
+    entrypoint: yarn start
+    ports:
+      - '3000:3000'
+      - '8080:8080'
